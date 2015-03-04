@@ -1,0 +1,61 @@
+
+/* List Group Variables
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+// Base Spacing for the List Group
+$lg-spacing              : 2*$base-spacing;
+
+
+// Colours
+$muted                   : #929292 !default;
+$grey                    : #f2f2f2 !default;
+$border-colour           : darken(#f2f2f2, 20%) !default;
+
+
+// Section Title
+$st-colour               : $muted;
+
+
+// Dividers
+$divider-font-weight    : 700;
+
+// Default
+$divider--default: (
+  bg                    : $grey,
+  colour                : $black,
+  border-col            : $border-colour,
+  border-width          : 1px 0,
+);
+// title
+$divider--title: (
+  bg                    : $grey,
+  colour                : $black,
+  border-col            : $border-colour,
+  border-width          : 1px 0 1px 0,
+);
+// Dark
+$divider--dark: (
+  bg                    : $black,
+  colour                : $white,
+  border-width          : 0
+);
+// Positive
+$divider--positive: (
+  bg                    : $success,
+  colour                : $white,
+  border-width          : 0
+);
+// Negative
+$divider--negative: (
+  bg                    : $danger,
+  colour                : $white,
+  border-width          : 0
+);
+
+
+// List Item
+$item-colour            : $black;
+$icon-width             : $lg-spacing; // Width of the Chevron
+$icon-colour            : $muted;
+
+// Item Content
+$secondary-colour       : $muted;

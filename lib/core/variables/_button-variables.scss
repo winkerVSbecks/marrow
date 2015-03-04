@@ -1,0 +1,55 @@
+
+/* Button Variables
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+$btn-font               : $header-font !default;
+$btn-font-weight        : 400 !default;
+$btn-font-size          : 11px !default;
+$btn-size               : 38px !default;
+
+// Basic
+$btn: (
+  color                 : $dark-grey,
+  bg                    : rgba(0, 0, 0, 0),
+  border                : $dark-grey,
+  hover: (
+    color               : darken($dark-grey, 20%),
+    bg                  : rgba(0, 0, 0, 0),
+    border              : darken($dark-grey, 20%)
+  )
+);
+
+// Primary
+$btn-primary: (
+  color                 : #fff,
+  bg                    : $primary,
+  border                : $primary,
+  hover: (
+    color               : #fff,
+    bg                  : darken($primary, 5%),
+    border              : darken($primary, 5%)
+  )
+);
+
+// Success
+$btn-success: (
+  color                 : #fff,
+  bg                    : $success,
+  border                : $success,
+  hover: (
+    color               : #fff,
+    bg                  : darken($success, 5%),
+    border              : darken($success, 5%)
+  )
+);
+
+// Danger
+$btn-danger: (
+  color                 : #fff,
+  bg                    : $danger,
+  border                : $danger,
+  hover: (
+    color               : #fff,
+    bg                  : darken($danger, 5%),
+    border              : darken($danger, 5%)
+  )
+);
