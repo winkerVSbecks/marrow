@@ -1,0 +1,48 @@
+
+/* Item Content
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+// Item Body Content
+.item-body {
+  @include flex(1);
+
+  // Aside Content
+  &--aside {
+    text-align: right;
+  }
+
+  // Body Title
+  &__title {
+    @include ellipsis();
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0;
+
+    @media (min-width: $sm) {
+      font-size: 1.6rem;
+    }
+  }
+
+  // Secondary content
+  &__sub {
+    @include ellipsis();
+    color: $secondary-colour;
+    display: block;
+    font-size: 70%;
+    margin: 0;
+  }
+}
+
+
+// Item Figure Content
+// Works with icons too
+.item-figure {
+  margin: 0 1em 0 0;
+  max-width: 30%;
+  text-align: center;
+
+  > img {
+    display: block;
+    height: auto;
+    width: 100%;
+  }
+}

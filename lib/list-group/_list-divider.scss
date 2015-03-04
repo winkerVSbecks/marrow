@@ -1,0 +1,76 @@
+
+/* List Dividers
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+// Base styling for the divider
+%list-divider {
+  @include display(flex);
+  @include align-items(center);
+
+  border-style: solid;
+  font-size: 1.8rem;
+  font-weight: $header-font-weight;
+  padding: 0.4*$lg-spacing 2*$lg-spacing 0.25*$lg-spacing $lg-spacing;
+  width: 100%;
+
+  @media (min-width: $sm) {
+    font-size: 2.4rem;
+  }
+
+  button { margin-left: 0.5*$lg-spacing; }
+}
+
+// Mixin to theme the divider
+@mixin divider-modifier($divider-info) {
+  color: map-get($divider-info, colour);
+  background-color: map-get($divider-info, bg);
+  border-color: map-get($divider-info, border-col);
+  border-width: map-get($divider-info, border-width);
+}
+
+
+.list-divider {
+  @extend %list-divider;
+  @include divider-modifier($divider--default);
+
+  // Main Content
+  &__main {
+    @include flex(1);
+    @include ellipsis();
+  }
+
+  // Divider Types
+  // Title
+  &--title {
+    @extend %list-divider;
+    @include divider-modifier($divider--title);
+  }
+
+  // Dark
+  &--dark {
+    @extend %list-divider;
+    @include divider-modifier($divider--dark);
+  }
+
+  // Positive
+  &--positive {
+    @extend %list-divider;
+    @include divider-modifier($divider--positive);
+  }
+
+  // Negative
+  &--negative {
+    @extend %list-divider;
+    @include divider-modifier($divider--negative);
+  }
+
+  // Spacer
+  &--spacer {
+    border-color: transparent;
+    height: (1.6 * 1.8rem) + (0.4*$lg-spacing + 0.25*$lg-spacing);
+    width: 100%;
+
+    @media (min-width: $sm) {
+      height: 1.6 * 2.4rem + (0.4*$lg-spacing + 0.25*$lg-spacing);
+    }
+  }
+}

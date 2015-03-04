@@ -1,0 +1,21 @@
+{
+  "name": "marrow",
+  "version": "0.0.0",
+  "authors": [
+    "rangle.io <bertrand@rangle.io>"
+  ],
+  "description": "Lightweight and responsive UI components built with Skeletor",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "skeletor": "git@github.com:rangle/skeletor.git",
+    "font-awesome": "~4.3.0"
+  }
+}

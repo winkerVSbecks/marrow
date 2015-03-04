@@ -1,0 +1,51 @@
+
+/* List Item
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.list-group--offset {
+  padding-left: $lg-spacing;
+
+  %item {
+    padding-left: 0;
+  }
+}
+
+%item {
+  @include display(flex);
+  @include align-items(center);
+  color: $item-colour;
+  text-decoration: none;
+  width: 100%;
+
+  &:not(:last-child) {
+    border-bottom: 1px solid $border-colour;
+  }
+}
+
+.item {
+  @extend %item;
+  padding-bottom: 0.5*$lg-spacing;
+  padding-left: $lg-spacing;
+  padding-right: 2*$lg-spacing;
+  padding-top: 0.5*$lg-spacing;
+
+  &--link {
+    @extend %item;
+    padding-bottom: 0.5*$lg-spacing;
+    padding-left: $lg-spacing;
+    padding-right: 2*$lg-spacing - 1.25*$icon-width;
+    padding-top: 0.5*$lg-spacing;
+
+    &:after {
+      color: $icon-colour;
+      content: '\f105';
+      font-family: 'FontAwesome';
+      font-size: 1.8rem;
+      padding-left: 0.25*$icon-width;
+      text-align: right;
+      width: $icon-width;
+    }
+  }
+}
+
+
+
