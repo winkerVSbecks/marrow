@@ -1,0 +1,68 @@
+@import 'navbar-variables';
+
+/* Navbar
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.navbar {
+  @include transition(all 0.3s ease-out);
+  background-color: $white;
+  border-bottom: 2px solid $grey-border;
+  padding: 2*$base-spacing 0;
+}
+
+.navbar__body {
+  @include display(flex);
+  @include align-items(center);
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
+
+  li {
+    list-style: none;
+    margin: 0;
+
+    &.navbar__logo {
+      @include flex(1);
+      text-align: left;
+    }
+  }
+}
+
+.navbar__item {
+  color: $black;
+  display: block;
+  font-size: 1.4rem;
+  height: $navbar-height;
+  line-height: $navbar-height;
+  overflow: hidden;
+  padding: 0 2*$base-spacing;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
+  @media (min-width: $sm) {
+    font-size: 1.8rem;
+  }
+
+  &--title {
+    @include flex(1);
+    text-align: center;
+
+    h4 {
+      @include ellipsis();
+      font-weight: $header-font-weight;
+      line-height: $navbar-height;
+      margin: 0;
+    }
+  }
+
+  &--btn {
+    width: 25%;
+
+    a {
+      @include ellipsis();
+      color: $muted;
+      text-decoration: none;
+    }
+  }
+}
+

@@ -4,6 +4,7 @@
 $primary                : #3498db !default;
 $success                : #46cb67 !default;
 $danger                 : #ff5e72 !default;
+$warning                : #fc9c20;
 
 $lighter-grey           : #ecf0f1 !default;
 $light-grey             : #bdc3c7 !default;
@@ -16,3 +17,5 @@ $body-bg                : $white !default;
 
 $anchor-colour          : $primary !default;
 $anchor-colour-hover    : darken($primary, 10%) !default;
+
+$grey-border            : $dark-grey;
