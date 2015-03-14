@@ -1,0 +1,63 @@
+
+/* Button Groups
+
+  Example:
+    <div class="btn-group" role="group" aria-label="Button group">
+      <a class="btn">Balance Sheet</a>
+      <a class="btn">Accounts</a>
+    </div>
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.btn-group {
+  @include display(flex);
+  margin-bottom: $base-spacing;
+  padding-left: 2*$base-spacing;
+  padding-right: 2*$base-spacing;
+  width: 100%;
+
+  @media (min-width: $md) {
+    @include display(inline-flex);
+    padding-left: $base-spacing;
+    padding-right: 0;
+    width: 70%;
+  }
+
+  > button,
+    .btn {
+    @include flex(1);
+    border-color: lighten($black, 20%);
+    border-radius: 0;
+    color: $black;
+    float: left;
+    font-size: 1.2*$btn-font-size;
+    margin-bottom: 0;
+    overflow: hidden;
+    padding: 0;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+    @media (min-width: $sm) {
+      font-size: 1.5*$btn-font-size;
+    }
+
+    + button,
+    + .btn {
+      margin-left: -1px;
+    }
+
+    &:active,
+    &.is-active {
+      background-color: $success;
+      color: $white;
+    }
+
+    &:first-child {
+      border-bottom-left-radius: $base-radius;
+      border-top-left-radius: $base-radius;
+    }
+
+    &:last-child {
+      border-bottom-right-radius: $base-radius;
+      border-top-right-radius: $base-radius;
+    }
+  }
+}
