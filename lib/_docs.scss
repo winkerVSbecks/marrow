@@ -129,3 +129,51 @@
     }
   }
 }
+
+.browser-body {
+  border: 1px solid #ddd;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+  margin-bottom: 2rem;
+
+  &--block {
+    @include display(flex);
+    @include align-items(center);
+    height: 320px;
+    text-align: center;
+  }
+
+  &__content {
+    display: inline;
+    margin: 0;
+    width: 100%;
+  }
+}
+
+
+/* Utils */
+.u-padding-horizontal {
+  padding-left: 2*$base-spacing;
+  padding-right: 2*$base-spacing;
+}
+
+.u-padding-vertical {
+  padding-bottom: 2*$base-spacing;
+  padding-top: 2*$base-spacing;
+}
+
+.u-padding-top {
+  padding-top: 2*$base-spacing;
+}
+
+.u-padding-bottom {
+  padding-bottom: 2*$base-spacing;
+}
+
+.u-padding-right {
+  padding-right: 2*$base-spacing;
+}
+
+.u-padding-left {
+  padding-left: 2*$base-spacing;
+}

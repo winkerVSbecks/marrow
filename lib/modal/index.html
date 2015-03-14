@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Basic Page Needs -->
+  <meta charset="utf-8">
+  <title>Marrow – Modal</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <!-- Mobile Specific metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- fonts -->
+  <link href="http://fonts.googleapis.com/css?family=Droid+Serif:400,400italic,700,700italic|Montserrat:400,700" rel="stylesheet" type="text/css">
+  <!-- styles -->
+  <link rel="stylesheet" href="../../css/app.min.css">
+  <link rel="stylesheet" href="../../css/devices.min.css">
+  <!-- favicon -->
+  <link rel="icon" type="image/png" href="/img/favicon.png">
+</head>
+
+<body>
+
+  <div class="container">
+    <header class="component-header">
+      <h6 class="component-header__title">
+        <a href="../../" class="component-header__back">back</a>
+        Modal
+      </h6>
+      <p class="component-header__body">responsive modal with an overlay and a close button</p>
+    </header>
+
+    <!-- Browser Chrome -->
+    <div class="browser-chrome">
+      <div class="browser-chrome__frame">
+        <span class="browser-chrome__buttons"></span>
+        <span class="browser-chrome__buttons"></span>
+        <span class="browser-chrome__buttons"></span>
+      </div>
+    </div>
+    <div class="browser-body browser-body--block">
+      <p class="browser-body__content">
+        <button class="btn--success"
+                onclick="toggleModal()">
+          Open Modal
+        </button>
+      </p>
+    </div>
+
+  </div>
+
+  <div class="modal-container js-modal-container">
+    <!-- overlay -->
+    <div class="overlay"
+         onclick="toggleModal()"></div>
+
+      <div class="modal modal--transition">
+
+        <nav class="navbar modal__header" role="navigation">
+          <ul class="navbar__body">
+
+            <li class="navbar__item navbar__item--button-sm"></li>
+
+            <!-- Title -->
+            <li class="navbar__item navbar__item--title">
+              <h4>My Fancy Modal</h4>
+            </li>
+
+            <!-- Close button -->
+            <li class="navbar__item">
+              <a href="#"
+                 class="modal__close"
+                 onclick="toggleModal()">
+                <i class="fa fa-times"></i>
+              </a>
+            </li>
+
+          </ul>
+        </nav>
+
+        <!-- Modal Content -->
+        <div class="modal__body">
+          <p><img src="https://d13yacurqjgara.cloudfront.net/users/71021/screenshots/1739635/shadow.gif" width="400px">
+        </div>
+
+    </div>
+  </div>
+
+  <script>
+    var modal = document.querySelector('.js-modal-container');
+
+    var toggleModal = function() {
+      modal.classList.toggle('modal-container--is-visible');
+    };
+  </script>
+</body>
+</html>
